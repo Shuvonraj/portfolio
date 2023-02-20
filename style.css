@@ -13,7 +13,7 @@
 
 body{
     background-color: var(--color-base2);
-    color: var(--color-base);
+    color: var(--color-body);
     font-family: var(--font-base);
 
 
@@ -26,20 +26,21 @@ body{
     transition:all 0.5s ease-in;
 }
 
+
 .navbar .nav-link:hover{
     color: var(--color-brand);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: var(--color-heading);
-    color: aliceblue;
-    font-weight: 700;
+
+.navbar .nav-link.active {
+    color: var(--color-brand);
 }
+
+
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--color-heading);
+    font-weight: 700;}
 
 a {
     text-decoration: none;
@@ -59,6 +60,18 @@ h3 {
     color: white;
 }
 
+.full-hieght {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid rgba(255,255,255, 0.1);
+}
+
+ 
 
 @media (min-width:992px) {
     .navbar {
@@ -72,4 +85,94 @@ h3 {
     .navbar img{
         border: 8px solid var(--color-brand);
     }
+}
+
+#content-wrapper{
+    padding-left: 20%;
+    padding-right: 20%;}
+
+
+.btn-primary{
+    width: 34%;
+    
+}
+
+.text-brand{
+    color: var(--color-brand);
+}
+
+.btn{
+    padding: 12px 28px;
+    font-weight: 700;
+}
+
+.btn-brand{
+    background-color: var(--color-brand);
+    border-color: var(--color-brand2);
+}
+
+.link-custom{
+    font-weight: 700;
+    position: relative;
+}
+
+.link-custom::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0%;
+    top: 110%;
+    transition: all 0.5s ;
+}
+
+.link-custom:hover::after{
+    width: 100%;
+    
+}
+
+.bg-base{
+    background-color: var(--color-base);
+}
+
+.shadow-effet{
+    transition: all 0.5s;
+}
+
+.shadow-effet:hover{
+    box-shadow: -6px 6px 0 0px var(--color-brand);
+}
+
+.iconbox{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+.card-custom .card-custom-img{
+    overflow: hidden;
+
+}
+
+.card-custom .card-custom-img img{
+    transition: all 0.5s ease;
+}
+
+.card-custom:hover .card-custom-img img{
+    transform: scale(1.1);
+}
+
+.bg-nav{
+    background-color: var(--color-base);
+}
+
+.person-pic{
+    border: 8px solid var(--color-brand);
+
 }
